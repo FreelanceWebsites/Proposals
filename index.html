@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Development Proposal - INNO POWER SOLUTIONS</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 0 30px rgba(0,0,0,0.1);
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 50px 40px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        
+        .header .subtitle {
+            font-size: 1.2em;
+            opacity: 0.95;
+            font-weight: 300;
+        }
+        
+        .meta-info {
+            background: #f8f9fa;
+            padding: 25px 40px;
+            border-bottom: 3px solid #667eea;
+        }
+        
+        .meta-info p {
+            margin: 8px 0;
+            font-size: 0.95em;
+        }
+        
+        .meta-info strong {
+            color: #667eea;
+            display: inline-block;
+            width: 100px;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        .section {
+            margin-bottom: 35px;
+        }
+        
+        .section h2 {
+            color: #667eea;
+            font-size: 1.8em;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e0e0e0;
+        }
+        
+        .section h3 {
+            color: #764ba2;
+            font-size: 1.3em;
+            margin: 20px 0 10px 0;
+        }
+        
+        .highlight-box {
+            background: #f0f4ff;
+            border-left: 4px solid #667eea;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        .highlight-box h4 {
+            color: #667eea;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+        
+        .benefit-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .benefit-list li {
+            padding: 12px 0;
+            padding-left: 30px;
+            position: relative;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .benefit-list li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            font-weight: bold;
+            font-size: 1.3em;
+        }
+        
+        .option-card {
+            background: white;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 30px;
+            margin: 25px 0;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.07);
+            transition: all 0.3s;
+        }
+        
+        .option-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.15);
+        }
+        
+        .option-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px 25px;
+            border-radius: 6px;
+            margin: -30px -30px 20px -30px;
+            font-size: 1.4em;
+            font-weight: bold;
+        }
+        
+        .option-recommended {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        }
+        
+        .features {
+            list-style: none;
+            padding: 0;
+            margin: 15px 0;
+        }
+        
+        .features li {
+            padding: 10px 0;
+            padding-left: 25px;
+            position: relative;
+        }
+        
+        .features li:before {
+            content: "●";
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            font-size: 1.2em;
+        }
+        
+        .pricing {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 6px;
+            margin-top: 20px;
+        }
+        
+        .pricing h4 {
+            color: #333;
+            margin-bottom: 15px;
+            font-size: 1.1em;
+        }
+        
+        .price-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 0;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .total-price {
+            font-size: 1.8em;
+            color: #667eea;
+            font-weight: bold;
+            text-align: right;
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 3px solid #667eea;
+        }
+        
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        .comparison-table th,
+        .comparison-table td {
+            padding: 15px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+        
+        .comparison-table th {
+            background: #667eea;
+            color: white;
+            font-weight: 600;
+        }
+        
+        .comparison-table tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        
+        .check {
+            color: #28a745;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+        
+        .cross {
+            color: #dc3545;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+        
+        .cta-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+            margin-top: 40px;
+        }
+        
+        .cta-section h3 {
+            font-size: 1.8em;
+            margin-bottom: 15px;
+        }
+        
+        .cta-section p {
+            font-size: 1.1em;
+            margin-bottom: 10px;
+        }
+        
+        .footer {
+            background: #2c3e50;
+            color: white;
+            padding: 25px 40px;
+            text-align: center;
+            font-size: 0.9em;
+        }
+        
+        .badge {
+            display: inline-block;
+            background: #f5576c;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: bold;
+            margin-left: 10px;
+        }
+        
+        .mockup-img {
+            width: 100%;
+            max-width: 600px;
+            margin: 20px auto;
+            display: block;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        
+        @media print {
+            body {
+                background: white;
+            }
+            .container {
+                box-shadow: none;
+            }
+            .option-card {
+                page-break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>INNO POWER SOLUTIONS</h1>
+            <p class="subtitle">Professional Website Development Proposal</p>
+        </div>
+        
+        <!-- Meta Information -->
+        <div class="meta-info">
+            <p><strong>To:</strong> Mr. Durai, INNO POWER SOLUTIONS</p>
+            <p><strong>From:</strong> Your Name - Web Development Specialist</p>
+            <p><strong>Date:</strong> October 18, 2025</p>
+            <p><strong>Project:</strong> Website Development & Deployment</p>
+        </div>
+        
+        <!-- Content -->
+        <div class="content">
+            <!-- Introduction -->
+            <div class="section">
+                <h2>Executive Summary</h2>
+                <p>Thank you for considering our services for INNO POWER SOLUTIONS' digital presence. We understand your business specializes in industrial electrical, automation, and panel accessories supply. This proposal outlines two strategic options designed to establish your online presence with <strong>zero recurring hosting costs</strong>.</p>
+                
+                <div class="highlight-box">
+                    <h4>🎯 Why This Approach Saves You Money</h4>
+                    <p>Your previous GoDaddy hosting incurred substantial recurring fees, which made it unsustainable. Our solution leverages <strong>GitHub Pages</strong> for completely <strong>FREE hosting</strong> using your existing domain. This is a <strong>one-time investment</strong> with no monthly/yearly hosting charges ever.</p>
+                </div>
+            </div>
+            
+            <!-- Key Benefits -->
+            <div class="section">
+                <h2>Key Advantages</h2>
+                <ul class="benefit-list">
+                    <li><strong>Zero Hosting Costs:</strong> Free lifetime hosting via GitHub Pages</li>
+                    <li><strong>Use Existing Domain:</strong> Connect your current domain at no extra cost</li>
+                    <li><strong>One-Time Payment:</strong> No recurring fees or surprise charges</li>
+                    <li><strong>Lightning Fast:</strong> GitHub's global CDN ensures rapid loading</li>
+                    <li><strong>99.9% Uptime:</strong> Enterprise-grade reliability</li>
+                    <li><strong>Mobile Responsive:</strong> Perfect display on all devices</li>
+                    <li><strong>Professional Design:</strong> Modern, clean interface</li>
+                    <li><strong>Easy Updates:</strong> Simple content management</li>
+                </ul>
+            </div>
+            
+            <!-- Option A -->
+            <div class="section">
+                <h2>Proposal Options</h2>
+                
+                <div class="option-card">
+                    <div class="option-header">
+                        OPTION A: Professional Static Website
+                    </div>
+                    
+                    <h3>What You Get:</h3>
+                    <p>A clean, professional single-page website showcasing your business essentials.</p>
+                    
+                    <ul class="features">
+                        <li><strong>Elegant Image Carousel</strong> - Showcase your products/services with smooth transitions</li>
+                        <li><strong>Company Information</strong> - About section with business details</li>
+                        <li><strong>Complete Contact Details</strong> - Address, phone, email displayed clearly</li>
+                        <li><strong>Business Hours</strong> - Operating hours and availability</li>
+                        <li><strong>Google Maps Integration</strong> - Location map for easy navigation</li>
+                        <li><strong>Mobile Responsive Design</strong> - Perfect viewing on phones and tablets</li>
+                        <li><strong>Fast Loading Speed</strong> - Optimized performance</li>
+                        <li><strong>Domain Connection</strong> - Your domain professionally linked</li>
+                    </ul>
+                    
+                    <p style="margin-top: 15px;"><em><strong>Note:</strong> This is a pure informational website. Contact details are displayed as plain text - no automated email forms, WhatsApp integration, or interactive features.</em></p>
+                    
+                    <div class="pricing">
+                        <h4>Investment Breakdown:</h4>
+                        <div class="price-row">
+                            <span>Website Design & Development</span>
+                            <strong>₹8,000</strong>
+                        </div>
+                        <div class="price-row">
+                            <span>Responsive Layout (Mobile/Tablet)</span>
+                            <strong>₹2,000</strong>
+                        </div>
+                        <div class="price-row">
+                            <span>GitHub Hosting Setup</span>
+                            <strong>₹1,500</strong>
+                        </div>
+                        <div class="price-row">
+                            <span>Domain Connection & Configuration</span>
+                            <strong>₹1,500</strong>
+                        </div>
+                        <div class="price-row">
+                            <span>Testing & Launch</span>
+                            <strong>₹1,000</strong>
+                        </div>
+                        <div class="total-price">
+                            TOTAL: ₹14,000
+                        </div>
+                    </div>
+                    
+                    <p style="margin-top: 15px; color: #28a745; font-weight: 600;">✓ Perfect for establishing basic online presence</p>
+                    <p style="color: #28a745; font-weight: 600;">✓ Ideal for businesses needing information display only</p>
+                </div>
+                
+                <!-- Option B -->
+                <div class="option-card">
+                    <div class="option-header option-recommended">
+                        OPTION B: Mini E-Commerce Solution <span class="badge">RECOMMENDED</span>
+                    </div>
+                    
+                    <h3>What You Get:</h3>
+                    <p>A complete e-commerce experience allowing customers to browse and order products online - all orders delivered directly to your Google Sheets.</p>
+                    
+                    <ul class="features">
+                        <li><strong>Everything in Option A</strong> - Plus advanced features below</li>
+                        <li><strong>Product Catalog</strong> - Organized product listings with images, descriptions, and prices</li>
+                        <li><strong>Category Management</strong> - Products sorted by categories (Electrical/Automation/Panels)</li>
+                        <li><strong>Product Search</strong> - Quick search functionality for customers</li>
+                        <li><strong>Shopping Cart System</strong> - Add/remove items, quantity adjustment</li>
+                        <li><strong>Order Form</strong> - Customer details capture (name, phone, email, address)</li>
+                        <li><strong>Google Sheets Integration</strong> - Orders automatically sent to your spreadsheet</li>
+                        <li><strong>Order Notifications</strong> - Real-time order alerts to your email</li>
+                        <li><strong>Admin Dashboard Access</strong> - View all orders in organized Google Sheets</li>
+                        <li><strong>Price Display in INR</strong> - Professional rupee formatting</li>
+                        <li><strong>Product Image Gallery</strong> - Multiple images per product</li>
+                        <li><strong>WhatsApp Quick Order</strong> - One-click order via WhatsApp option</li>
+                    </ul>
+                    
+                    <div class="highlight-box" style="margin-top: 20px;">
+                        <h4>💡 How It Works:</h4>
+                        <p><strong>1.</strong> Customer browses products → <strong>2.</strong> Adds to cart → <strong>3.</strong> Fills order details → <strong>4.</strong> Submits order → <strong>5.</strong> You receive complete order in Google Sheets with timestamp + You get email notification</p>
+                    </div>
+                    
+                    <div class="pricing">
+                        <h4>Investment Breakdown:</h4>
+                        <div class="price-row">
+                            <span>Complete Website Design & Development</span>
+                            <strong>₹15,000</strong>
+                        </div>
+                        <div class="price-row">
+                            <span>Product Catalog System (Up to 50 products)</span>
+                            <strong>₹8,000</strong>
+                        </div>
+                        <div class="price-row">
+                            <span>Shopping Cart & Order System</span>
+                            <strong>₹7,000</strong>
+                        </div>
+                        <div class="price-row">
+                            <span>Google Sheets Integration + Email Alerts</span>
+                            <strong>₹5,000</strong>
+                        </div>
+                        <div class="price-row">
+                            <span>Search & Filter Functionality</span>
+                            <strong>₹3,000</strong>
+                        </div>
+                        <div class="price-row">
+                            <span>WhatsApp Integration</span>
+                            <strong>₹2,000</strong>
+                        </div>
+                        <div class="price-row">
+                            <span>GitHub Hosting + Domain Setup</span>
+                            <strong>₹2,000</strong>
+                        </div>
+                        <div class="price-row">
+                            <span>Testing, Documentation & Training</span>
+                            <strong>₹3,000</strong>
+                        </div>
+                        <div class="total-price">
+                            TOTAL: ₹45,000
+                        </div>
+                    </div>
+                    
+                    <p style="margin-top: 15px; color: #f5576c; font-weight: 600;">⭐ Recommended for growing businesses</p>
+                    <p style="color: #f5576c; font-weight: 600;">⭐ Start accepting orders online immediately</p>
+                    <p style="color: #f5576c; font-weight: 600;">⭐ Build customer database from day one</p>
+                </div>
+            </div>
+            
+            <!-- Comparison -->
+            <div class="section">
+                <h2>Quick Comparison</h2>
+                <table class="comparison-table">
+                    <tr>
+                        <th>Feature</th>
+                        <th>Option A</th>
+                        <th>Option B</th>
+                    </tr>
+                    <tr>
+                        <td>Company Information</td>
+                        <td class="check">✓</td>
+                        <td class="check">✓</td>
+                    </tr>
+                    <tr>
+                        <td>Image Carousel</td>
+                        <td class="check">✓</td>
+                        <td class="check">✓</td>
+                    </tr>
+                    <tr>
+                        <td>Contact Details Display</td>
+                        <td class="check">✓</td>
+                        <td class="check">✓</td>
+                    </tr>
+                    <tr>
+                        <td>Google Maps</td>
+                        <td class="check">✓</td>
+                        <td class="check">✓</td>
+                    </tr>
+                    <tr>
+                        <td>Product Catalog</td>
+                        <td class="cross">✗</td>
+                        <td class="check">✓</td>
+                    </tr>
+                    <tr>
+                        <td>Shopping Cart</td>
+                        <td class="cross">✗</td>
+                        <td class="check">✓</td>
+                    </tr>
+                    <tr>
+                        <td>Online Orders</td>
+                        <td class="cross">✗</td>
+                        <td class="check">✓</td>
+                    </tr>
+                    <tr>
+                        <td>Google Sheets Integration</td>
+                        <td class="cross">✗</td>
+                        <td class="check">✓</td>
+                    </tr>
+                    <tr>
+                        <td>WhatsApp Integration</td>
+                        <td class="cross">✗</td>
+                        <td class="check">✓</td>
+                    </tr>
+                    <tr>
+                        <td>Email Notifications</td>
+                        <td class="cross">✗</td>
+                        <td class="check">✓</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Investment</strong></td>
+                        <td><strong>₹14,000</strong></td>
+                        <td><strong>₹45,000</strong></td>
+                    </tr>
+                </table>
+            </div>
+            
+            <!-- Timeline -->
+            <div class="section">
+                <h2>Project Timeline</h2>
+                <div class="highlight-box">
+                    <p><strong>Option A:</strong> 5-7 working days from approval</p>
+                    <p><strong>Option B:</strong> 12-15 working days from approval</p>
+                    <p style="margin-top: 10px;"><em>Timelines include design, development, testing, and deployment</em></p>
+                </div>
+            </div>
+            
+            <!-- What's Included -->
+            <div class="section">
+                <h2>What's Included (Both Options)</h2>
+                <ul class="benefit-list">
+                    <li>Complete source code ownership</li>
+                    <li>GitHub repository setup and access</li>
+                    <li>Domain connection and SSL certificate (HTTPS)</li>
+                    <li>Mobile and tablet responsive design</li>
+                    <li>Cross-browser compatibility (Chrome, Firefox, Safari, Edge)</li>
+                    <li>Basic SEO optimization</li>
+                    <li>Professional documentation</li>
+                    <li>2 rounds of revisions included</li>
+                    <li>1 month post-launch support</li>
+                </ul>
+            </div>
+            
+            <!-- Payment Terms -->
+            <div class="section">
+                <h2>Payment Terms</h2>
+                <div class="pricing" style="max-width: 600px;">
+                    <div class="price-row">
+                        <span>Advance (Project Start)</span>
+                        <strong>50%</strong>
+                    </div>
+                    <div class="price-row">
+                        <span>Final (Upon Completion & Launch)</span>
+                        <strong>50%</strong>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        
+        <!-- CTA Section -->
+        <div class="cta-section">
+            <h3>Ready to Establish Your Digital Presence?</h3>
+            <p>Let's transform INNO POWER SOLUTIONS' online presence</p>
+            <p style="font-size: 1.3em; margin-top: 20px;"><strong>Contact: [Your Phone] | [Your Email]</strong></p>
+            <p style="margin-top: 15px; font-size: 0.95em;">This proposal is valid for 15 days from the date mentioned above</p>
+        </div>
+        
+        <!-- Footer -->
+        <div class="footer">
+            <p>Thank you for considering our proposal. We look forward to partnering with INNO POWER SOLUTIONS.</p>
+            <p style="margin-top: 10px;">© 2025 - Professional Web Development Services</p>
+        </div>
+    </div>
+    
+    <script>
+        // Print functionality
+        window.onload = function() {
+            // You can add any interactive features here if needed
+            console.log('Proposal loaded successfully');
+        };
+    </script>
+</body>
+</html>
