@@ -1,793 +1,747 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website Development Proposal - INNO POWER SOLUTIONS</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: #f5f5f5;
-        }
-        
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            background: white;
-            box-shadow: 0 0 30px rgba(0,0,0,0.1);
-        }
-        
-        .header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 50px 40px;
-            text-align: center;
-        }
-        
-        .header h1 {
-            font-size: 2.5em;
-            margin-bottom: 10px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-        
-        .header .subtitle {
-            font-size: 1.2em;
-            opacity: 0.95;
-            font-weight: 300;
-        }
-        
-        .meta-info {
-            background: #f8f9fa;
-            padding: 25px 40px;
-            border-bottom: 3px solid #667eea;
-        }
-        
-        .meta-info p {
-            margin: 8px 0;
-            font-size: 0.95em;
-        }
-        
-        .meta-info strong {
-            color: #667eea;
-            display: inline-block;
-            width: 100px;
-        }
-        
-        .content {
-            padding: 40px;
-        }
-        
-        .section {
-            margin-bottom: 35px;
-        }
-        
-        .section h2 {
-            color: #667eea;
-            font-size: 1.8em;
-            margin-bottom: 15px;
-            padding-bottom: 10px;
-            border-bottom: 2px solid #e0e0e0;
-        }
-        
-        .section h3 {
-            color: #764ba2;
-            font-size: 1.3em;
-            margin: 20px 0 10px 0;
-        }
-        
-        .highlight-box {
-            background: #f0f4ff;
-            border-left: 4px solid #667eea;
-            padding: 20px;
-            margin: 20px 0;
-            border-radius: 4px;
-        }
-        
-        .highlight-box h4 {
-            color: #667eea;
-            margin-bottom: 10px;
-            font-size: 1.1em;
-        }
-        
-        .benefit-list {
-            list-style: none;
-            padding: 0;
-        }
-        
-        .benefit-list li {
-            padding: 12px 0;
-            padding-left: 30px;
-            position: relative;
-            border-bottom: 1px solid #eee;
-        }
-        
-        .benefit-list li:before {
-            content: "✓";
-            position: absolute;
-            left: 0;
-            color: #667eea;
-            font-weight: bold;
-            font-size: 1.3em;
-        }
-        
-        .option-card {
-            background: white;
-            border: 2px solid #e0e0e0;
-            border-radius: 8px;
-            padding: 30px;
-            margin: 25px 0;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.07);
-            transition: all 0.3s;
-        }
-        
-        .option-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 15px rgba(0,0,0,0.15);
-        }
-        
-        .option-header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 15px 25px;
-            border-radius: 6px;
-            margin: -30px -30px 20px -30px;
-            font-size: 1.4em;
-            font-weight: bold;
-        }
-        
-        .option-recommended {
-            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-        }
-        
-        .features {
-            list-style: none;
-            padding: 0;
-            margin: 15px 0;
-        }
-        
-        .features li {
-            padding: 10px 0;
-            padding-left: 25px;
-            position: relative;
-        }
-        
-        .features li:before {
-            content: "●";
-            position: absolute;
-            left: 0;
-            color: #667eea;
-            font-size: 1.2em;
-        }
-        
-        .pricing {
-            background: #f8f9fa;
-            padding: 20px;
-            border-radius: 6px;
-            margin-top: 20px;
-        }
-        
-        .pricing h4 {
-            color: #333;
-            margin-bottom: 15px;
-            font-size: 1.1em;
-        }
-        
-        .price-row {
-            display: flex;
-            justify-content: space-between;
-            padding: 8px 0;
-            border-bottom: 1px solid #ddd;
-        }
-        
-        .total-price {
-            font-size: 1.8em;
-            color: #667eea;
-            font-weight: bold;
-            text-align: right;
-            margin-top: 15px;
-            padding-top: 15px;
-            border-top: 3px solid #667eea;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quotation — SARA Medtech</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
 
-        .final-price {
-            font-size: 1.8em;
-            color: #ee4d47;
-            font-weight: bold;
-            text-align: right;
-            margin-top: 15px;
-            padding-top: 15px;
-            border-top: 3px solid #ee4d47;
-        }
-        
-        .comparison-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 20px 0;
-        }
-        
-        .comparison-table th,
-        .comparison-table td {
-            padding: 15px;
-            text-align: left;
-            border: 1px solid #ddd;
-        }
-        
-        .comparison-table th {
-            background: #667eea;
-            color: white;
-            font-weight: 600;
-        }
-        
-        .comparison-table tr:nth-child(even) {
-            background: #f8f9fa;
-        }
-        
-        .check {
-            color: #28a745;
-            font-size: 1.2em;
-            font-weight: bold;
-        }
-        
-        .cross {
-            color: #dc3545;
-            font-size: 1.2em;
-            font-weight: bold;
-        }
-        
-        .cta-section {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 40px;
-            text-align: center;
-            margin-top: 40px;
-        }
-        
-        .cta-section h3 {
-            font-size: 1.8em;
-            margin-bottom: 15px;
-        }
-        
-        .cta-section p {
-            font-size: 1.1em;
-            margin-bottom: 10px;
-        }
-        
-        .footer {
-            background: #2c3e50;
-            color: white;
-            padding: 25px 40px;
-            text-align: center;
-            font-size: 0.9em;
-        }
-        
-        .badge {
-            display: inline-block;
-            background: #f5576c;
-            color: white;
-            padding: 5px 15px;
-            border-radius: 20px;
-            font-size: 0.85em;
-            font-weight: bold;
-            margin-left: 10px;
-        }
-        
-        .mockup-img {
-            width: 100%;
-            max-width: 600px;
-            margin: 20px auto;
-            display: block;
-            border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-        }
-        
-        @media print {
-            body {
-                background: white;
-            }
-            .container {
-                box-shadow: none;
-            }
-            .option-card {
-                page-break-inside: avoid;
-            }
-        }
-    </style>
+body {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  color: #1a1a18;
+  background: #f0eeea;
+  padding: 2.5rem 1rem;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+.page {
+  max-width: 800px;
+  margin: 0 auto 1.5rem auto;
+  background: #ffffff;
+  padding: 52px 56px;
+  box-shadow: 0 4px 32px rgba(0,0,0,0.07);
+}
+.page:first-of-type {
+  margin-bottom: 2rem;
+}
+
+/* ── Header ── */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-bottom: 28px;
+  border-bottom: 1px solid #e4e2dc;
+  margin-bottom: 36px;
+  gap: 16px;
+}
+.brand h1 {
+  font-family: 'Instrument Serif', serif;
+  font-size: 28px;
+  color: #0F6E56;
+  letter-spacing: -0.5px;
+  font-weight: 400;
+}
+.brand p {
+  font-size: 11.5px;
+  color: #9a9890;
+  margin-top: 3px;
+}
+.doc-info { text-align: right; flex-shrink: 0; }
+.doc-label {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #9a9890;
+  margin-bottom: 5px;
+}
+.doc-number {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1a1a18;
+  letter-spacing: -0.3px;
+}
+.doc-date { font-size: 11px; color: #9a9890; margin-top: 4px; }
+
+/* ── Parties ── */
+.parties {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 36px;
+}
+.party {
+  background: #f7f6f2;
+  border-radius: 10px;
+  padding: 16px 20px;
+}
+.party-label {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #9a9890;
+  margin-bottom: 8px;
+}
+.party-name { font-size: 14px; font-weight: 600; color: #1a1a18; margin-bottom: 5px; }
+.party-detail { font-size: 12px; color: #5c5b57; line-height: 1.65; }
+
+/* ── Section label ── */
+.section-label {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #0F6E56;
+  padding-bottom: 8px;
+  border-bottom: 1.5px solid #0F6E56;
+  margin-bottom: 14px;
+}
+
+/* ── Services — desktop table ── */
+.table-wrap { overflow-x: auto; margin-bottom: 24px; }
+.services-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 520px;
+}
+.services-table thead th {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: #9a9890;
+  padding: 8px 12px;
+  background: #f7f6f2;
+  border-top: 1px solid #e4e2dc;
+  border-bottom: 1px solid #e4e2dc;
+  text-align: left;
+}
+.services-table thead th:last-child { text-align: right; }
+.services-table tbody td {
+  padding: 16px 12px;
+  border-bottom: 1px solid #f0eeea;
+  vertical-align: top;
+  line-height: 1.5;
+}
+.services-table tbody td:last-child {
+  text-align: right;
+  font-weight: 600;
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+/* ── Services — mobile cards ── */
+.service-cards { display: none; margin-bottom: 24px; }
+.svc-card {
+  border: 1px solid #e4e2dc;
+  border-radius: 10px;
+  padding: 16px;
+  margin-bottom: 12px;
+}
+.svc-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 10px;
+  gap: 10px;
+}
+.svc-card-amount {
+  font-weight: 600;
+  font-size: 14px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.svc-name {
+  font-weight: 600;
+  color: #1a1a18;
+  margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  flex-wrap: wrap;
+}
+.svc-desc { font-size: 11.5px; color: #7a7975; line-height: 1.6; }
+
+.badge {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 4px;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+.badge-negotiable { background: #FDF0DC; color: #7A4A0A; }
+.badge-direct     { background: #E3EEF9; color: #144F8A; }
+
+/* ── Totals ── */
+.totals-wrap { display: flex; justify-content: flex-end; margin-bottom: 36px; }
+.totals-inner { width: 100%; max-width: 300px; }
+.t-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 7px 0;
+  font-size: 12px;
+  color: #5c5b57;
+  border-bottom: 1px solid #f0eeea;
+}
+.t-row.negotiable { color: #7A4A0A; }
+.t-row.direct     { color: #144F8A; }
+.t-row.total-main {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1a1a18;
+  border-bottom: none;
+  padding-top: 12px;
+  border-top: 1.5px solid #e4e2dc;
+  margin-top: 4px;
+}
+.t-row.note-row {
+  font-size: 11px;
+  color: #9a9890;
+  border-bottom: none;
+  padding-top: 4px;
+}
+.t-val { text-align: right; flex-shrink: 0; font-weight: 500; }
+
+/* ── Payment ── */
+.payment-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-bottom: 36px;
+}
+.pay-card {
+  border: 1px solid #e4e2dc;
+  border-radius: 10px;
+  padding: 16px 18px;
+}
+.pay-card.m1 { border-left: 3px solid #0F6E56; }
+.pay-card.m2 { border-left: 3px solid #1D9E75; }
+.pay-phase {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #9a9890;
+  margin-bottom: 7px;
+}
+.pay-amount {
+  font-family: 'Instrument Serif', serif;
+  font-size: 24px;
+  color: #0F6E56;
+  margin-bottom: 4px;
+}
+.pay-when { font-size: 11.5px; color: #7a7975; }
+
+/* ── Info grid ── */
+.info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  margin-bottom: 40px;
+}
+.info-block ul { list-style: none; padding: 0; }
+.info-block ul li {
+  font-size: 12px;
+  color: #5c5b57;
+  padding: 6px 0 6px 16px;
+  border-bottom: 1px solid #f4f3ef;
+  position: relative;
+  line-height: 1.55;
+}
+.info-block ul li::before {
+  content: "–";
+  position: absolute;
+  left: 0;
+  color: #c8c6be;
+}
+
+/* ── Footer ── */
+.footer {
+  padding-top: 22px;
+  border-top: 1px solid #e4e2dc;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 24px;
+}
+.footer-note { font-size: 11px; color: #9a9890; line-height: 1.65; max-width: 380px; }
+.sig { text-align: right; flex-shrink: 0; }
+.sig-name  { font-weight: 600; font-size: 14px; color: #1a1a18; }
+.sig-role  { font-size: 11px; color: #9a9890; margin-top: 2px; }
+.sig-contact { font-size: 11.5px; color: #0F6E56; margin-top: 4px; font-weight: 500; }
+
+/* ── Mobile ── */
+@media (max-width: 600px) {
+  body { padding: 1rem 0.5rem; }
+
+  .page { padding: 28px 20px; }
+
+  .header { flex-direction: column; align-items: flex-start; gap: 14px; }
+  .doc-info { text-align: left; }
+
+  .parties { grid-template-columns: 1fr; }
+
+  /* Hide table, show cards */
+  .table-wrap { display: none; }
+  .service-cards { display: block; }
+
+  .totals-wrap { justify-content: stretch; }
+  .totals-inner { max-width: 100%; width: 100%; }
+
+  .payment-grid { grid-template-columns: 1fr; }
+
+  .info-grid { grid-template-columns: 1fr; gap: 28px; }
+
+  .footer { flex-direction: column; align-items: flex-start; gap: 20px; }
+  .sig { text-align: left; }
+}
+
+@media print {
+  body { background: white; padding: 0; }
+  .page { box-shadow: none; padding: 36px 44px; }
+  .service-cards { display: none !important; }
+  .table-wrap { display: block !important; }
+}
+</style>
 </head>
 <body>
-    <div class="container">
-        <!-- Header -->
-        <div class="header">
-            <h1>INNO POWER SOLUTIONS</h1>
-            <p class="subtitle">Website Development Proposal</p>
+<div class="page">
+
+  <!-- HEADER -->
+  <div class="header">
+    <div class="brand">
+      <h1>Hari</h1>
+      <p>Web &amp; Digital Setup</p>
+    </div>
+    <div class="doc-info">
+      <div class="doc-label">Quotation</div>
+      <div class="doc-number">Q-2026-001</div>
+      <div class="doc-date">21 May 2026</div>
+    </div>
+  </div>
+
+  <!-- PARTIES -->
+  <div class="parties">
+    <div class="party">
+      <div class="party-label">From</div>
+      <div class="party-name">Hari</div>
+      <div class="party-detail">Web &amp; Digital Setup<br>+91 96778 36826</div>
+    </div>
+    <div class="party">
+      <div class="party-label">Prepared for</div>
+      <div class="party-name">SARA Medtech</div>
+      <div class="party-detail">Rahul Raveendran, Lead Consultant<br>Coimbatore, Tamil Nadu, India</div>
+    </div>
+  </div>
+
+  <!-- SERVICES — desktop table -->
+  <div class="section-label">Scope of Services</div>
+
+  <div class="table-wrap">
+    <table class="services-table">
+      <thead>
+        <tr>
+          <th style="width:34%">Service</th>
+          <th style="width:46%">Details</th>
+          <th style="width:20%">Amount</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <div class="svc-name">Website Design &amp; Development</div>
+            <div class="svc-desc">Static website, fully responsive — deployed on Vercel or GitHub Pages. One-time delivery, no recurring cost.</div>
+          </td>
+          <td>
+            <div class="svc-desc">
+              5 pages: Home, Services, About / Why SARA, Clients, Contact<br>
+              Contact form, mobile-optimised, SEO-ready<br>
+              All source files and deployment included
+            </div>
+          </td>
+          <td>&#8377;4,000</td>
+        </tr>
+        <tr>
+          <td>
+            <div class="svc-name">Technical Setup &amp; Configuration <span class="badge badge-negotiable">Negotiable</span></div>
+            <div class="svc-desc">Domain DNS, Zoho email MX records, Google Business Profile setup.</div>
+          </td>
+          <td>
+            <div class="svc-desc">
+              Domain registration &amp; DNS setup on Hostinger<br>
+              Zoho Mail — 5 custom email accounts configured<br>
+              Google Business Profile setup &amp; verification
+            </div>
+          </td>
+          <td style="color:#7A4A0A;">&#8377;1,000<br><span style="font-size:10px;font-weight:400;color:#9a9890;">negotiable based on scope</span></td>
+        </tr>
+        <tr>
+          <td>
+            <div class="svc-name">Domain Registration <span class="badge badge-direct">Direct cost</span></div>
+            <div class="svc-desc">saramedtech.com — 3-year term via Hostinger. Paid directly by client.</div>
+          </td>
+          <td>
+            <div class="svc-desc">
+              Year 1: &#8377;199 &nbsp;|&nbsp; Renewal from Year 2: &#8377;1,299/yr<br>
+              Zoho Mail Free (up to 5 users): &#8377;0/yr<br>
+              Hosting (Vercel / GitHub Pages): &#8377;0/yr
+            </div>
+          </td>
+          <td style="color:#144F8A;">&#8377;199<br><span style="font-size:10px;font-weight:400;color:#9a9890;">client pays Hostinger</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- SERVICES — mobile cards -->
+  <div class="service-cards">
+
+    <div class="svc-card">
+      <div class="svc-card-header">
+        <div class="svc-name">Website Design &amp; Development</div>
+        <div class="svc-card-amount">&#8377;4,000</div>
+      </div>
+      <div class="svc-desc">
+        Static website, fully responsive — deployed on Vercel or GitHub Pages. One-time delivery.<br><br>
+        5 pages: Home, Services, About / Why SARA, Clients, Contact<br>
+        Contact form · Mobile-optimised · SEO-ready · Source files included
+      </div>
+    </div>
+
+    <div class="svc-card">
+      <div class="svc-card-header">
+        <div>
+          <div class="svc-name">Technical Setup &amp; Configuration</div>
+          <span class="badge badge-negotiable">Negotiable</span>
         </div>
-        
-        <!-- Meta Information -->
-        <div class="meta-info">
-            <p><strong>To:</strong> Mr. Durai, INNO POWER SOLUTIONS</p>
-            <p><strong>From:</strong> Hariharan K, Freelance Web Developer</p>
-            <p><strong>Date:</strong> October 18, 2025</p>
-            <p><strong>Project:</strong> Website Development & Deployment</p>
+        <div class="svc-card-amount" style="color:#7A4A0A;">&#8377;1,000</div>
+      </div>
+      <div class="svc-desc">
+        Domain DNS setup · Zoho Mail (5 accounts) configuration · Google Business Profile setup &amp; verification<br>
+        <em style="color:#9a9890;">Final amount negotiable based on scope</em>
+      </div>
+    </div>
+
+    <div class="svc-card">
+      <div class="svc-card-header">
+        <div>
+          <div class="svc-name">Domain Registration</div>
+          <span class="badge badge-direct">Direct cost — client pays Hostinger</span>
         </div>
-        
-        <!-- Content -->
-        <div class="content">
-            <!-- Introduction -->
-            <div class="section">
-                <h2>Executive Summary</h2>
-                <p>Thank you for considering our services for INNO POWER SOLUTIONS' digital presence. We understand your business specializes in industrial electrical, automation, and panel accessories supply. This proposal outlines two strategic options designed to establish your online presence with <strong>zero recurring hosting costs</strong>.</p>
-                
-                <div class="highlight-box">
-                    <h4>🎯 Why This Approach Saves You Money</h4>
-                    <p>Your previous GoDaddy hosting incurred substantial recurring fees, which made it unsustainable. Our solution leverages <strong>GitHub Pages</strong> for completely <strong>FREE hosting</strong> using your existing domain. This is a <strong>one-time investment</strong> with no monthly/yearly hosting charges.</p>
-                </div>
-            </div>
-            
-            <!-- Key Benefits -->
-            <div class="section">
-                <h2>Key Advantages</h2>
-                <ul class="benefit-list">
-                    <li><strong>Zero Hosting Costs:</strong> Free lifetime hosting via GitHub Pages</li>
-                    <li><strong>Use Existing Domain:</strong> Connect your current domain at no extra cost</li>
-                    <li><strong>One-Time Payment:</strong> No recurring fees or surprise charges</li>
-                    <li><strong>Lightning Fast:</strong> GitHub's global CDN ensures rapid loading</li>
-                    <li><strong>99.9% Uptime:</strong> Enterprise-grade reliability</li>
-                    <li><strong>Mobile Responsive:</strong> Perfect display on all devices</li>
-                    <li><strong>Professional Design:</strong> Modern, clean interface</li>
-                    <li><strong>Easy Updates:</strong> Simple content management</li>
-                </ul>
-            </div>
-            
-            <!-- Option A -->
-            <div class="section">
-                <h2>Proposal Options</h2>
-                
-                <div class="option-card">
-                    <div class="option-header">
-                        OPTION A: Professional Static Website
-                    </div>
-                    
-                    <h3>What You Get:</h3>
-                    <p>A clean, professional single-page website showcasing your business essentials.</p>
-                    
-                    <ul class="features">
-                        <li><strong>Elegant Image Carousel</strong> - Showcase your products/services with smooth transitions</li>
-                        <li><strong>Company Information</strong> - About section with business details</li>
-                        <li><strong>Complete Contact Details</strong> - Address, phone, email displayed clearly</li>
-                        <li><strong>Business Hours</strong> - Operating hours and availability</li>
-                        <li><strong>Maps Integration</strong> - Location map for easy navigation</li>
-                        <li><strong>Mobile Responsive Design</strong> - Perfect viewing on phones and tablets</li>
-                        <li><strong>Fast Loading Speed</strong> - Optimized performance</li>
-                        <li><strong>Domain Connection</strong> - Your domain professionally linked</li>
-                    </ul>
-                    
-                    <p style="margin-top: 15px;"><em><strong>Note:</strong> This is a pure informational website. Contact details are displayed as plain text - no automated email forms, WhatsApp integration, or interactive features.</em></p>
-                    
-                    <div class="pricing">
-                        <h4>Investment Breakdown:</h4>
-                        <div class="price-row">
-                            <span>Website Design & Development</span>
-                            <strong>₹2,000</strong>
-                        </div>
-                        <div class="price-row">
-                            <span>GitHub Hosting Setup</span>
-                            <strong>₹1,000</strong>
-                        </div>
-                        <div class="price-row">
-                            <span>Responsive Layout (Mobile/Tablet)</span>
-                            <strong>₹500</strong>
-                        </div>
-                        <div class="price-row">
-                            <span>Domain Connection & Configuration</span>
-                            <strong>₹500</strong>
-                        </div>
-                        <div class="price-row">
-                            <span>Testing & Launch</span>
-                            <strong>₹500</strong>
-                        </div>
-                        <div class="total-price" style="text-decoration: line-through">
-                            Regular Price: ₹4,500
-                        </div>
-                        <div class="final-price">
-                            Final: ₹4,000
-                        </div>
-                    </div>
-                    
-                    <p style="margin-top: 15px; color: #28a745; font-weight: 600;">✓ Perfect for establishing basic online presence</p>
-                    <p style="color: #28a745; font-weight: 600;">✓ Ideal for businesses needing information display only</p>
+        <div class="svc-card-amount" style="color:#144F8A;">&#8377;199</div>
+      </div>
+      <div class="svc-desc">
+        saramedtech.com · 3-year term<br>
+        Year 1: &#8377;199 &nbsp;|&nbsp; Renewal from Year 2: &#8377;1,299/yr<br>
+        Zoho Mail Free + Vercel hosting: &#8377;0/yr
+      </div>
+    </div>
 
-                    <div class="highlight-box" style="margin-top: 20px;">
-                        <h4>🎯 Sample Preview:</h4>
-                        
-                        <!-- Carousel Preview -->
-                        <div style="background: #fff; padding: 15px; border-radius: 4px; margin-bottom: 15px;">
-                            <p style="margin-bottom: 15px;"><strong>Image Carousel:</strong></p>
-                            <div style="display: flex; gap: 10px; overflow-x: auto; padding-bottom: 10px;">
-                                <!-- Carousel Image 1 -->
-                                <div style="min-width: 200px; background: #f8f9fa; padding: 10px; border-radius: 4px; text-align: center;">
-                                    <div style="background: #e9ecef; height: 120px; border-radius: 4px; display: flex; align-items: center; justify-content: center; color: #666;">
-                                        [Product Image 1]
-                                    </div>
-                                    <p style="margin-top: 8px; font-size: 0.9em; color: #666;">Industrial Automation Solutions</p>
-                                </div>
-                                <!-- Carousel Image 2 -->
-                                <div style="min-width: 200px; background: #f8f9fa; padding: 10px; border-radius: 4px; text-align: center;">
-                                    <div style="background: #e9ecef; height: 120px; border-radius: 4px; display: flex; align-items: center; justify-content: center; color: #666;">
-                                        [Product Image 2]
-                                    </div>
-                                    <p style="margin-top: 8px; font-size: 0.9em; color: #666;">Control Panels</p>
-                                </div>
-                                <!-- Carousel Image 3 -->
-                                <div style="min-width: 200px; background: #f8f9fa; padding: 10px; border-radius: 4px; text-align: center;">
-                                    <div style="background: #e9ecef; height: 120px; border-radius: 4px; display: flex; align-items: center; justify-content: center; color: #666;">
-                                        [Product Image 3]
-                                    </div>
-                                    <p style="margin-top: 8px; font-size: 0.9em; color: #666;">Electrical Components</p>
-                                </div>
-                            </div>
-                            <div style="display: flex; justify-content: center; gap: 5px; margin-top: 10px;">
-                                <div style="width: 8px; height: 8px; background: #667eea; border-radius: 50%;"></div>
-                                <div style="width: 8px; height: 8px; background: #ddd; border-radius: 50%;"></div>
-                                <div style="width: 8px; height: 8px; background: #ddd; border-radius: 50%;"></div>
-                            </div>
-                        </div>
+  </div>
 
-                        <!-- Contact Info -->
-                        <p style="margin-bottom: 15px;"><strong>Business Information:</strong></p>
-                        <div style="background: #fff; padding: 15px; border-radius: 4px;">
-                            <p style="color: #333; margin-bottom: 5px;">📍 123, Industrial Area, Chennai</p>
-                            <p style="color: #333; margin-bottom: 5px;">📞 +91 98765 43210</p>
-                            <p style="color: #333;">📧 contact@innopowersolutions.com</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Option B -->
-                <div class="option-card">
-                    <div class="option-header option-recommended">
-                        OPTION B: Mini E-Commerce Solution <span class="badge">RECOMMENDED</span>
-                    </div>
-                    
-                    <h3>What You Get:</h3>
-                    <p>A complete e-commerce experience allowing customers to browse and order products online - all orders delivered directly to your Google Sheets.</p>
-                    
-                    <ul class="features">
-                        <li><strong>Everything in Option A</strong> - Plus advanced features below</li>
-                        <li><strong>Product Catalog</strong> - Organized product listings with images, descriptions, and prices</li>
-                        <li><strong>Category Management</strong> - Products sorted by categories (Electrical/Automation/Panels)</li>
-                        <li><strong>Product Search</strong> - Quick search functionality for customers</li>
-                        <li><strong>Shopping Cart System</strong> - Add/remove items, quantity adjustment</li>
-                        <li><strong>Order Form</strong> - Customer details capture (name, phone, email, address)</li>
-                        <li><strong>Google Sheets Integration</strong> - Orders automatically sent to your spreadsheet</li>
-                        <li><strong>Order Notifications</strong> - Real-time order alerts to your email</li>
-                        <li><strong>View Orders</strong> - View all orders in organized Google Sheets</li>
-                        <li><strong>Product Image Gallery</strong> - Multiple images per product if needed</li>
-                        <li><strong>WhatsApp Quick Order</strong> - One-click order via WhatsApp option - Redirects to your WhatsApp</li>
-                    </ul>
-                    
-                    <div class="highlight-box" style="margin-top: 20px;">
-                        <h4>💡 How It Works:</h4>
-                        <p><strong>1.</strong> Customer browses products → <strong>2.</strong> Adds to cart → <strong>3.</strong> Fills order details → <strong>4.</strong> Submits order → <strong>5.</strong> You receive complete order in Google Sheets with timestamp + You get email notification</p>
-                    </div>
-                    
-                    <div class="pricing">
-                        <h4>Investment Breakdown:</h4>
-                        <div class="price-row">
-                            <span>Complete Website Design & Development</span>
-                            <strong>₹3,000</strong>
-                        </div>
-                        <div class="price-row">
-                            <span>Product Catalog System (Up to 50 products)</span>
-                            <strong>₹1,000</strong>
-                        </div>
-                        <div class="price-row">
-                            <span>Shopping Cart & Order System</span>
-                            <strong>₹1,000</strong>
-                        </div>
-                        <div class="price-row">
-                            <span>GitHub Hosting + Domain Setup</span>
-                            <strong>₹1,000</strong>
-                        </div>
-                        <div class="price-row">
-                            <span>Google Sheets Integration + Email Alerts</span>
-                            <strong>₹1,000</strong>
-                        </div>
-                        <div class="price-row">
-                            <span>Search & Filter Functionality</span>
-                            <strong>₹500</strong>
-                        </div>
-                        <div class="price-row">
-                            <span>WhatsApp Integration</span>
-                            <strong>₹500</strong>
-                        </div>
-                        <div class="price-row">
-                            <span>Testing & Documentation</span>
-                            <strong>₹500</strong>
-                        </div>
-                        <div class="total-price" style="text-decoration: line-through">
-                            Regular Price: ₹8,500
-                        </div>
-                        <div class="final-price">
-                            Final: ₹7,000
-                        </div>
-                    </div>
+  <!-- TOTALS -->
+  <div class="totals-wrap">
+    <div class="totals-inner">
+      <div class="t-row">
+        <span>Website Design &amp; Development</span>
+        <span class="t-val">&#8377;4,000</span>
+      </div>
+      <div class="t-row negotiable">
+        <span>Technical Setup &amp; Configuration</span>
+        <span class="t-val">&#8377;1,000 <span style="font-size:10px;font-weight:400;">(negotiable)</span></span>
+      </div>
+      <div class="t-row direct">
+        <span>Domain — direct cost</span>
+        <span class="t-val">&#8377;199</span>
+      </div>
+      <div class="t-row total-main">
+        <span>Service Fee Total</span>
+        <span class="t-val">&#8377;5,000</span>
+      </div>
+      <div class="t-row note-row">
+        <span>Setup fee subject to discussion &amp; agreement</span>
+      </div>
+    </div>
+  </div>
 
-                    <p style="margin-top: 15px; color: #28a745; font-weight: 600;">⭐ Recommended for growing businesses</p>
-                    <p style="color: #28a745; font-weight: 600;">⭐ Start accepting orders online immediately</p>
-                    <p style="color: #28a745; font-weight: 600;">⭐ Build customer database from day one</p>
+  <!-- PAYMENT TERMS -->
+  <div class="section-label">Payment Terms</div>
+  <div class="payment-grid">
+    <div class="pay-card m1">
+      <div class="pay-phase">Milestone 1 — Advance</div>
+      <div class="pay-amount">&#8377;2,000</div>
+      <div class="pay-when">To be paid before work begins</div>
+    </div>
+    <div class="pay-card m2">
+      <div class="pay-phase">Milestone 2 — On Delivery</div>
+      <div class="pay-amount">&#8377;2,000</div>
+      <div class="pay-when">On completion &amp; handover of all deliverables</div>
+    </div>
+  </div>
 
-                    <div class="highlight-box" style="margin-top: 20px;">
-                        <h4>🛍️ Sample Product Catalog:</h4>
-                        
-                        <!-- Category Navigation -->
-                        <div style="display: flex; gap: 10px; margin-bottom: 15px;">
-                            <div style="background: #667eea; color: white; padding: 8px 15px; border-radius: 20px; font-size: 0.9em;">All Products</div>
-                            <div style="background: #f0f4ff; color: #667eea; padding: 8px 15px; border-radius: 20px; font-size: 0.9em;">Electrical</div>
-                            <!-- <div style="background: #f0f4ff; color: #667eea; padding: 8px 15px; border-radius: 20px; font-size: 0.9em;">Automation</div> -->
-                        </div>
+  <!-- PREREQUISITES & CLARIFICATIONS -->
+  <div class="info-grid">
+    <div class="info-block">
+      <div class="section-label">Prerequisites from Client</div>
+      <ul>
+        <li>Brand color palette or color preference for the website</li>
+        <li>Company logo files in PNG or SVG format</li>
+        <li>Approval to display client company names on the website</li>
+        <li>LinkedIn or other social media handles to link</li>
+        <li>Headshot or photo of Rahul Raveendran (for About page)</li>
+        <li>TÜV SÜD certification badge or document image (if available)</li>
+        <li>Any preferred contact form fields beyond Name, Email, Phone, Message</li>
+      </ul>
+    </div>
+    <div class="info-block">
+      <div class="section-label">Items to Confirm on Call</div>
+      <ul>
+        <!-- <li>Approval to display client company names publicly on the website</li>
+        <li>Specific regulatory markets or segments to prioritise</li> -->
+        <li>Any testimonials or case studies to include</li>
+        <li>Certifications or accreditations to feature</li>
+        <!-- <li>Final scope and amount for technical setup fee</li> -->
+        <!-- <li>Google Analytics ID for website tracking</li> -->
+        <li>Preferred domain extension — .com recommended</li>
+      </ul>
+    </div>
+  </div>
 
-                        <!-- Product Grid -->
-                        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; margin-bottom: 20px;">
-                            <!-- Product 1 -->
-                            <div style="background: #fff; padding: 15px; border-radius: 4px; border: 1px solid #eee;">
-                                <div style="background: #e9ecef; height: 120px; border-radius: 4px; display: flex; align-items: center; justify-content: center; color: #666; margin-bottom: 10px;">
-                                    [Product Image]
-                                </div>
-                                <p style="color: #333; font-weight: bold; margin-bottom: 5px;">Industrial Contactor - TC100</p>
-                                <p style="color: #666; font-size: 0.85em; margin-bottom: 8px;">High-performance magnetic contactor</p>
-                                <div style="display: flex; justify-content: space-between; align-items: center;">
-                                    <p style="color: #f5576c; font-weight: bold;">₹2,500.00</p>
-                                    <button style="background: #28a745; color: white; border: none; padding: 5px 10px; border-radius: 4px; font-size: 0.9em;">Add to Cart</button>
-                                </div>
-                            </div>
-                            
-                            <!-- Product 2 -->
-                            <!-- <div style="background: #fff; padding: 15px; border-radius: 4px; border: 1px solid #eee;">
-                                <div style="background: #e9ecef; height: 120px; border-radius: 4px; display: flex; align-items: center; justify-content: center; color: #666; margin-bottom: 10px;">
-                                    [Product Image]
-                                </div>
-                                <p style="color: #333; font-weight: bold; margin-bottom: 5px;">PLC Controller - S7</p>
-                                <p style="color: #666; font-size: 0.85em; margin-bottom: 8px;">Programmable Logic Controller</p>
-                                <div style="display: flex; justify-content: space-between; align-items: center;">
-                                    <p style="color: #f5576c; font-weight: bold;">₹15,000.00</p>
-                                    <button style="background: #28a745; color: white; border: none; padding: 5px 10px; border-radius: 4px; font-size: 0.9em;">Add to Cart</button>
-                                </div>
-                            </div> -->
-                        </div>
+  <!-- FOOTER -->
+  <div class="footer">
+    <div class="footer-note">
+      Domain registration is a direct cost payable by the client to Hostinger and is not included in the service fee. Technical setup fee is indicative and subject to mutual agreement.
+    </div>
+    <!-- <div class="sig">
+      <div class="sig-name">Hari</div>
+      <div class="sig-role">Freelancer</div>
+      <div class="sig-contact">+91 96778 36826</div>
+    </div> -->
+  </div>
 
-                        <!-- Order Form Preview -->
-                        <p style="margin-bottom: 15px;"><strong>Quick Order Form:</strong></p>
-                        <div style="background: #fff; padding: 15px; border-radius: 4px;">
-                            <div style="display: flex; gap: 15px; margin-bottom: 15px;">
-                                <div style="flex: 1;">
-                                    <p style="color: #333; font-size: 0.9em; margin-bottom: 5px;">Company Name</p>
-                                    <div style="background: #f8f9fa; padding: 8px; border-radius: 4px; color: #666;">ABC Industries</div>
-                                </div>
-                                <div style="flex: 1;">
-                                    <p style="color: #333; font-size: 0.9em; margin-bottom: 5px;">Contact Number</p>
-                                    <div style="background: #f8f9fa; padding: 8px; border-radius: 4px; color: #666;">+91 98765-43210</div>
-                                </div>
-                            </div>
-                            <div style="background: #f8f9fa; padding: 10px; border-radius: 4px; margin-bottom: 10px;">
-                                <p style="color: #333; font-size: 0.9em; margin-bottom: 5px;">Order Summary:</p>
-                                <p style="color: #666; font-size: 0.9em;">2x TC100 Contactors - ₹5,000</p>
-                                <p style="color: #666; font-size: 0.9em;">1x PLC Controller - ₹15,000</p>
-                            </div>
-                            <button style="background: #f5576c; color: white; border: none; padding: 10px 20px; border-radius: 4px; width: 100%;">Place Order</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Comparison -->
-            <div class="section">
-                <h2>Quick Comparison</h2>
-                <table class="comparison-table">
-                    <tr>
-                        <th>Feature</th>
-                        <th>Option A</th>
-                        <th>Option B</th>
-                    </tr>
-                    <tr>
-                        <td>Company Information</td>
-                        <td class="check">✓</td>
-                        <td class="check">✓</td>
-                    </tr>
-                    <tr>
-                        <td>Image Carousel</td>
-                        <td class="check">✓</td>
-                        <td class="check">✓</td>
-                    </tr>
-                    <tr>
-                        <td>Contact Details Display</td>
-                        <td class="check">✓</td>
-                        <td class="check">✓</td>
-                    </tr>
-                    <tr>
-                        <td>Google Maps</td>
-                        <td class="check">✓</td>
-                        <td class="check">✓</td>
-                    </tr>
-                    <tr>
-                        <td>Product Catalog</td>
-                        <td class="cross">✗</td>
-                        <td class="check">✓</td>
-                    </tr>
-                    <tr>
-                        <td>Shopping Cart</td>
-                        <td class="cross">✗</td>
-                        <td class="check">✓</td>
-                    </tr>
-                    <tr>
-                        <td>Online Orders</td>
-                        <td class="cross">✗</td>
-                        <td class="check">✓</td>
-                    </tr>
-                    <tr>
-                        <td>Google Sheets Integration</td>
-                        <td class="cross">✗</td>
-                        <td class="check">✓</td>
-                    </tr>
-                    <tr>
-                        <td>WhatsApp Integration</td>
-                        <td class="cross">✗</td>
-                        <td class="check">✓</td>
-                    </tr>
-                    <tr>
-                        <td>Email Notifications</td>
-                        <td class="cross">✗</td>
-                        <td class="check">✓</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Investment</strong></td>
-                        <td><strong>₹4,000</strong></td>
-                        <td><strong>₹8,000</strong></td>
-                    </tr>
-                </table>
-            </div>
-            
-            <!-- Timeline -->
-            <div class="section">
-                <h2>Project Timeline</h2>
-                <div class="highlight-box">
-                    <p><strong>Option A:</strong> 5-7 working days from approval</p>
-                    <p><strong>Option B:</strong> 12-15 working days from approval</p>
-                    <p style="margin-top: 10px;"><em>Timelines include design, development, testing, and deployment</em></p>
-                </div>
-            </div>
-            
-            <!-- What's Included -->
-            <div class="section">
-                <h2>What's Included (Both Options)</h2>
-                <ul class="benefit-list">
-                    <li>Complete source code ownership</li>
-                    <li>GitHub repository setup and access</li>
-                    <li>Domain connection and SSL certificate (HTTPS)</li>
-                    <li>Mobile responsive design</li>
-                    <li>Cross-browser compatibility (Chrome, Firefox, Safari, Edge)</li>
-                    <li>Basic SEO optimization</li>
-                    <li>Professional documentation</li>
-                    <li>2 rounds of revisions included</li>
-                    <li>1 month post-launch support</li>
-                </ul>
-            </div>
-            
-            <!-- Technical Specifications -->
-            <div class="section">
-                <h2>Technical Specifications & Constraints</h2>
-                
-                <!-- Browser & Device Support -->
-                <!-- <div class="highlight-box">
-                    <h4>Browser & Device Compatibility</h4>
-                    <ul class="benefit-list">
-                        <li><strong>Browsers:</strong> Chrome (last 2 versions), Firefox (last 2 versions), Safari (last 2 versions), Edge (last 2 versions)</li>
-                        <li><strong>Minimum Screen Size:</strong> 320px width (mobile devices)</li>
-                        <li><strong>Performance Target:</strong> Load time under 3 seconds on 4G connections</li>
-                    </ul>
-                </div> -->
+</div>
 
-                <!-- Product Catalog Specifications (Option B) -->
-                <!-- <div class="highlight-box">
-                    <h4>Product Catalog Constraints (Option B)</h4>
-                    <ul class="benefit-list">
-                        <li><strong>Maximum Products:</strong> 50 products</li>
-                        <li><strong>Images per Product:</strong> Up to 3 images</li>
-                        <li><strong>Image Specifications:</strong> Max 2MB per image, JPG/PNG format, minimum 800x800px</li>
-                        <li><strong>Description Length:</strong> Up to 500 characters per product</li>
-                    </ul>
-                </div> -->
+<!-- NEW PAGE: Digital Infrastructure Plan -->
+<div class="page">
+  <div class="header">
+    <div class="brand">
+      <h1>Sara Medtech</h1>
+      <p>Digital Infrastructure Plan</p>
+    </div>
+    <div class="doc-info">
+      <div class="doc-label">Document</div>
+      <div class="doc-number">Infrastructure</div>
+      <!-- <div class="doc-date">May 2026 · Confidential</div> -->
+    </div>
+  </div>
 
-                <!-- Support & Maintenance -->
-                <div class="highlight-box">
-                    <h4>Support & Maintenance Terms</h4>
-                    <ul class="benefit-list">
-                        <li><strong>Response Time:</strong> Within 24 hours during business days</li>
-                        <li><strong>Support Hours:</strong> Monday to Friday, 9 AM to 6 PM IST</li>
-                        <li><strong>Support Coverage:</strong> Bug fixes, minor updates, technical guidance</li>
-                        <li><strong>Post Support:</strong> Additional support available at ₹1,500/month after initial month</li>
-                    </ul>
-                </div>
-
-                <!-- Revision & Content -->
-                <div class="highlight-box">
-                    <h4>Revision & Content Guidelines</h4>
-                    <ul class="benefit-list">
-                        <li><strong>Revision Timeline:</strong> Must be requested within 7 days of delivery</li>
-                        <li><strong>Revision Scope:</strong> Layout adjustments, color schemes, content updates</li>
-                        <li><strong>Content Format:</strong> Text in Word/Google Doc, images in JPG/PNG</li>
-                        <li><strong>Additional Revisions:</strong> ₹1,000 per additional revision round</li>
-                    </ul>
-                </div>
-
-                <!-- Legal & Ownership -->
-                <div class="highlight-box">
-                    <h4>Legal & Ownership Details</h4>
-                    <ul class="benefit-list">
-                        <li><strong>Code Ownership:</strong> Full ownership transfers upon final payment</li>
-                        <li><strong>Warranty Period:</strong> 30 days from launch date</li>
-                        <li><strong>Liability Limit:</strong> Limited to project cost</li>
-                        <!-- <li><strong>Confidentiality:</strong> Mutual NDA available upon request</li> -->
-                    </ul>
-                </div>
-
-                <!-- Change Management -->
-                <!-- <div class="highlight-box">
-                    <h4>Change Management Process</h4>
-                    <ul class="benefit-list">
-                        <li><strong>Change Requests:</strong> Must be submitted in writing</li>
-                        <li><strong>Timeline Impact:</strong> Changes may affect delivery schedule</li>
-                        <li><strong>Scope Changes:</strong> Additional features priced separately</li>
-                        <li><strong>Acceptance:</strong> 3-day testing period for new features</li>
-                    </ul>
-                </div> -->
-            </div>
-
-            <!-- Payment Terms -->
-            <div class="section">
-                <h2>Payment Terms</h2>
-                <div class="pricing" style="max-width: 600px;">
-                    <div class="price-row">
-                        <span>Advance (Project Start)</span>
-                        <strong>50%</strong>
-                    </div>
-                    <div class="price-row">
-                        <span>Final (Upon Completion & Launch)</span>
-                        <strong>50%</strong>
-                    </div>
-                </div>
-            </div>
-            
+  <!-- SECTION 01: Domain Options -->
+  <div class="section-label">01 Domain Options — saramedtech</div>
+  
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px;">
+    <div style="background: #f7f6f2; padding: 16px; border-radius: 8px; border-left: 3px solid #0F6E56;">
+      <div style="font-family: 'Instrument Serif', serif; font-size: 16px; font-weight: 600; color: #0F6E56; margin-bottom: 8px;">saramedtech.com</div>
+      <div style="font-size: 11px; color: #9a9890; text-transform: uppercase; font-weight: 600; margin-bottom: 8px;">RECOMMENDED</div>
+      <div style="font-size: 12px; color: #1a1a18; margin-bottom: 12px; line-height: 1.6;">Global credibility for dealing with hospitals, institutions, and international partners.</div>
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px;">
+        <div>
+          <div style="font-size: 10px; color: #9a9890; font-weight: 600; margin-bottom: 4px;">Year 1</div>
+          <div style="font-size: 14px; font-weight: 600; color: #0F6E56;">&#8377;199</div>
         </div>
-        
-        <!-- CTA Section -->
-        <div class="cta-section">
-            <h3>Ready to Establish Your Digital Presence?</h3>
-            <p>Let's transform INNO POWER SOLUTIONS' online presence</p>
-            <p style="font-size: 1.3em; margin-top: 20px;"><strong>Contact: +91 9677836826 | door2hari@gmail.com</strong></p>
-            <p style="margin-top: 15px; font-size: 0.95em;">This proposal is valid for 7 days from the date mentioned above</p>
+        <div>
+          <div style="font-size: 10px; color: #9a9890; font-weight: 600; margin-bottom: 4px;">Renewal/Year</div>
+          <div style="font-size: 14px; font-weight: 600; color: #1a1a18;">&#8377;1,299</div>
         </div>
-        
-        <!-- Footer -->
-        <div class="footer">
-            <p>Thank you for considering our proposal. We look forward to partnering with INNO POWER SOLUTIONS.</p>
-            <!-- <p style="margin-top: 10px;">© 2025 - Professional Web Development Services</p> -->
-        </div>
+      </div>
+      <div style="font-size: 11px; color: #5c5b57; margin-top: 12px; padding-top: 12px; border-top: 1px solid #e4e2dc;">3-year term requires &#8377;199/year rate</div>
     </div>
     
-    <script>
-        // Print functionality
-        window.onload = function() {
-            // You can add any interactive features here if needed
-            console.log('Proposal loaded successfully');
-        };
-    </script>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+      <div style="background: #f7f6f2; padding: 14px; border-radius: 8px;">
+        <div style="font-size: 13px; font-weight: 600; color: #1a1a18; margin-bottom: 6px;">saramedtech.in</div>
+        <div style="font-size: 11px; color: #5c5b57; margin-bottom: 8px;">Indian presence focus</div>
+        <div style="font-size: 12px; font-weight: 600; color: #1a1a18;">&#8377;1 / &#8377;899<span style="font-size: 10px; font-weight: 400; color: #9a9890;">/yr</span></div>
+      </div>
+      <div style="background: #f7f6f2; padding: 14px; border-radius: 8px;">
+        <div style="font-size: 13px; font-weight: 600; color: #1a1a18; margin-bottom: 6px;">saramedtech.co.in</div>
+        <div style="font-size: 11px; color: #5c5b57; margin-bottom: 8px;">Alternative Indian TLD</div>
+        <div style="font-size: 12px; font-weight: 600; color: #1a1a18;">&#8377;499 / &#8377;799<span style="font-size: 10px; font-weight: 400; color: #9a9890;">/yr</span></div>
+      </div>
+    </div>
+  </div>
+  
+  <div style="background: #0F6E56; color: white; padding: 14px; border-radius: 8px; margin-bottom: 16px;">
+    <div style="font-size: 10px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 6px;">Bundle Option</div>
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+      <div>
+        <div style="font-size: 12px; font-weight: 600; margin-bottom: 2px;">.in + .com + .online</div>
+        <div style="font-size: 11px; opacity: 0.9;">Brand protection across extensions</div>
+      </div>
+      <div style="text-align: right;">
+        <div style="font-size: 13px; font-weight: 600;">&#8377;1,387</div>
+        <div style="font-size: 10px; opacity: 0.9;">Year 1</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 02: Email Setup -->
+  <div class="section-label" style="margin-top: 32px;">02 Email Setup — Zoho Mail Free Plan</div>
+  
+  <div class="info-grid">
+    <div class="info-block">
+      <div style="font-weight: 600; margin-bottom: 12px; font-size: 12px;">What You Get</div>
+      <ul>
+        <li>Custom domain email (e.g. name@saramedtech.com)</li>
+        <li>Up to 5 user accounts (Sufficient for current team)</li>
+        <!-- <li>5 GB storage per user (25 GB total)</li> -->
+        <li>Webmail access (Clean browser-based interface)</li>
+        <li>iOS & Android mobile app (Full-featured)</li>
+        <li>Spam & phishing filter (Enterprise-grade)</li>
+        <li>Ad-free email experience</li>
+      </ul>
+    </div>
+    <div class="info-block">
+      <div style="font-weight: 600; margin-bottom: 12px; font-size: 12px;">Limitations to Know</div>
+      <ul>
+        <li>No IMAP / POP3 — Cannot use Outlook or Apple Mail</li>
+        <li>No external email forwarding</li>
+        <li>No offline access (Internet required)</li>
+        <li>No shared team calendar</li>
+        <li>Community support only (no phone support)</li>
+        <li>Max 5 users (6th person triggers upgrade)</li>
+      </ul>
+    </div>
+  </div>
+
+  <p style="margin-top: 16px; color: #5c5b57; font-size: 12px;">
+    <strong>Cost:</strong> &#8377;0 / year<br>
+    <strong>Setup:</strong> Create Zoho Mail account → Add domain → Update DNS MX records on Hostinger (~15 minutes). Live within hours.
+  </p>
+
+  <!-- SECTION 03: Scalability Paths -->
+  <div class="section-label" style="margin-top: 32px;">03 Scalability Path — When Your Team Grows</div>
+  
+  <div style="margin-bottom: 24px;">
+    <div style="font-weight: 600; margin-bottom: 14px; font-size: 12px; color: #0F6E56;">Track A — Stay within Zoho Ecosystem</div>
+    <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px;">
+      <div style="background: #f7f6f2; padding: 14px; border-radius: 8px; border-top: 3px solid #0F6E56;">
+        <div style="font-size: 10px; color: #9a9890; font-weight: 600; text-transform: uppercase; margin-bottom: 8px;">Stage 1</div>
+        <div style="font-size: 13px; font-weight: 600; color: #1a1a18; margin-bottom: 2px;">Start (now)</div>
+        <div style="font-size: 12px; font-weight: 600; color: #0F6E56; margin-bottom: 10px;">Zoho Mail Free</div>
+        <div style="font-size: 10px; color: #5c5b57; line-height: 1.5; border-top: 1px solid #e4e2dc; padding-top: 10px;">
+          <div style="margin-bottom: 6px;"><strong>Users:</strong> up to 5</div>
+          <div style="margin-bottom: 6px;"><strong>Cost:</strong> &#8377;0/yr</div>
+          <div><strong>Upgrade when:</strong> Team grows past 5</div>
+        </div>
+      </div>
+      
+      <div style="background: #f7f6f2; padding: 14px; border-radius: 8px; border-top: 3px solid #9a9890;">
+        <div style="font-size: 10px; color: #9a9890; font-weight: 600; text-transform: uppercase; margin-bottom: 8px;">Stage 2</div>
+        <div style="font-size: 13px; font-weight: 600; color: #1a1a18; margin-bottom: 2px;">Growing team</div>
+        <div style="font-size: 12px; font-weight: 600; color: #0F6E56; margin-bottom: 10px;">Zoho Mail Lite</div>
+        <div style="font-size: 10px; color: #5c5b57; line-height: 1.5; border-top: 1px solid #e4e2dc; padding-top: 10px;">
+          <div style="margin-bottom: 6px;"><strong>Users:</strong> up to 15</div>
+          <div style="margin-bottom: 6px;"><strong>Cost:</strong> &#8377;480/user/yr</div>
+          <div><strong>Upgrade when:</strong> 6th person</div>
+        </div>
+      </div>
+      
+      <div style="background: #f7f6f2; padding: 14px; border-radius: 8px; border-top: 3px solid #7A4A0A;">
+        <div style="font-size: 10px; color: #9a9890; font-weight: 600; text-transform: uppercase; margin-bottom: 8px;">Stage 3</div>
+        <div style="font-size: 13px; font-weight: 600; color: #1a1a18; margin-bottom: 2px;">Full suite</div>
+        <div style="font-size: 12px; font-weight: 600; color: #7A4A0A; margin-bottom: 10px;">Zoho Workplace Std</div>
+        <div style="font-size: 10px; color: #5c5b57; line-height: 1.5; border-top: 1px solid #e4e2dc; padding-top: 10px;">
+          <div style="margin-bottom: 6px;"><strong>Users:</strong> 15+</div>
+          <div style="margin-bottom: 6px;"><strong>Cost:</strong> &#8377;1,500/user/yr</div>
+          <div><strong>Upgrade when:</strong> Need shared docs</div>
+        </div>
+      </div>
+    </div>
+    <p style="margin-top: 14px; color: #5c5b57; font-size: 11px; padding: 12px; background: #f7f6f2; border-radius: 6px;">✓ All upgrades within same Zoho admin panel | ✓ Zero data loss | ✓ Upgrade individual users independently</p>
+  </div>
+
+  <div style="background: #f7f6f2; border-left: 3px solid #0F6E56; padding: 16px; border-radius: 4px; margin-bottom: 24px;">
+    <div style="font-weight: 600; margin-bottom: 8px; font-size: 12px;">Track B — Migrate to Google Workspace (Future)</div>
+    <p style="font-size: 12px; color: #5c5b57; margin-bottom: 8px;">Move when: (1) actively fundraising, (2) working with large hospitals/enterprises in Google ecosystem, or (3) team exceeds 15 people.</p>
+    <p style="font-size: 12px; color: #5c5b57;"><strong>Cost:</strong> Google Workspace starts at ~&#8377;6,000/user/year (Business Starter)</p>
+  </div>
+
+  <!-- SECTION 04: Budget Summary -->
+  <div class="section-label">04 Annual Budget Summary</div>
+  
+  <div style="margin-bottom: 32px;">
+    <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; margin-bottom: 16px;">
+      <div style="background: #f7f6f2; padding: 16px; border-radius: 8px;">
+        <div style="font-size: 11px; color: #9a9890; font-weight: 600; margin-bottom: 6px;">Domain</div>
+        <div style="font-size: 13px; font-weight: 600; color: #1a1a18; margin-bottom: 4px;">saramedtech.com</div>
+        <div style="font-size: 11px; color: #5c5b57;">Year 1: &#8377;199<br>Year 2+: &#8377;1,299/yr</div>
+      </div>
+      <div style="background: #f7f6f2; padding: 16px; border-radius: 8px;">
+        <div style="font-size: 11px; color: #9a9890; font-weight: 600; margin-bottom: 6px;">Email</div>
+        <div style="font-size: 13px; font-weight: 600; color: #1a1a18; margin-bottom: 4px;">Zoho Mail Free</div>
+        <div style="font-size: 11px; color: #5c5b57;">&#8377;0/year (up to 5 users)</div>
+      </div>
+      <div style="background: #f7f6f2; padding: 16px; border-radius: 8px;">
+        <div style="font-size: 11px; color: #9a9890; font-weight: 600; margin-bottom: 6px;">Hosting &amp; Tools</div>
+        <div style="font-size: 13px; font-weight: 600; color: #1a1a18; margin-bottom: 4px;">Vercel + Google</div>
+        <div style="font-size: 11px; color: #5c5b57;">&#8377;0/year</div>
+      </div>
+    </div>
+    <div style="background: #0F6E56; color: white; padding: 16px; border-radius: 8px; text-align: center;">
+      <div style="font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 8px;">Total Annual Cost</div>
+      <div style="font-size: 20px; font-weight: 600;">Year 1: &#8377;199 &nbsp;|&nbsp; Year 2+: &#8377;1,299/yr</div>
+    </div>
+  </div>
+
+  <!-- SECTION 05: Additional Actions -->
+  <!-- <div class="section-label">05 Additional Actions — All Free</div>
+  
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+    <div style="background: #f7f6f2; padding: 14px; border-radius: 8px; border-left: 3px solid #0F6E56;">
+      <div style="font-size: 11px; color: #9a9890; font-weight: 600; text-transform: uppercase; margin-bottom: 6px;">HIGH PRIORITY</div>
+      <ul style="list-style: none; padding: 0; margin: 0; font-size: 12px; line-height: 1.6; color: #1a1a18;">
+        <li style="margin-bottom: 8px;"><strong>Google Business Profile</strong> — Appear on Google Search &amp; Maps</li>
+        <li style="margin-bottom: 8px;"><strong>LinkedIn Company Page</strong> — Primary B2B channel for medtech</li>
+        <li style="margin-bottom: 8px;"><strong>SPF / DKIM / DMARC</strong> — Prevent emails from going to spam</li>
+        <li><strong>DPIIT Startup India</strong> — Free cloud credits + tax benefits</li>
+      </ul>
+    </div>
+    <div style="background: #f7f6f2; padding: 14px; border-radius: 8px; border-left: 3px solid #9a9890;">
+      <div style="font-size: 11px; color: #9a9890; font-weight: 600; text-transform: uppercase; margin-bottom: 6px;">MEDIUM PRIORITY</div>
+      <ul style="list-style: none; padding: 0; margin: 0; font-size: 12px; line-height: 1.6; color: #1a1a18;">
+        <li style="margin-bottom: 8px;"><strong>WhatsApp Business</strong> — Standard client communication in India</li>
+        <li style="margin-bottom: 8px;"><strong>Privacy Policy Page</strong> — Mandatory for health-adjacent products</li>
+        <li><strong>Email Signature</strong> — Every team member with branding</li>
+      </ul>
+    </div>
+  </div> -->
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <div class="footer-note">
+      <!-- All pricing is approximate and subject to change. Verify current prices on Hostinger, Zoho, and Google before purchase. -->
+    </div>
+    <div class="sig">
+      <div class="sig-name">Hari</div>
+      <div class="sig-role">Freelancer</div>
+      <div class="sig-contact">+91 96778 36826</div>
+    </div>
+  </div>
+
+</div>
+
 </body>
 </html>
